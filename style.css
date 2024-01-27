@@ -1,7 +1,7 @@
 body {
     display: flex;
     justify-content: center;
-    height: 1000px;
+    height: 100vh;
     align-items: center;
     gap: 50px;
 }
@@ -114,7 +114,6 @@ h1 {
     .mainBlock {
         display: flex;
         flex-direction: column;
-        width: 1000px;
         gap: 100px
     }
 }
