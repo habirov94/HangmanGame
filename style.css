@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 1000px;
+    align-items: center;
+    gap: 50px;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    gap: 20px;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+button {
+    background-color: blueviolet;
+    color: aliceblue;
+    border-radius: 10px;
+    height: 30px;
+    width: 40px;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}
+
+#answer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.word {
+    text-align: center;
+    width: 20px;
+    height: 30px;
+    border-bottom: 2px solid black;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-modal.close {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.resault-modal {
+    visibility: hidden;
+}
+
+.resault-modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-box {
+    width: 400px;
+    height: 300px;
+    background-color: darkorange;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-resault-button {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .mainBlock {
+        display: flex;
+        flex-direction: column;
+        width: 1000px;
+        gap: 100px
+    }
+}
