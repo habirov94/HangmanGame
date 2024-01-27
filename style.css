@@ -114,6 +114,6 @@ h1 {
     .mainBlock {
         display: flex;
         flex-direction: column;
-        gap: 100px
+        gap: 30px
     }
 }

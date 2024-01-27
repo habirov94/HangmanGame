@@ -7,24 +7,33 @@ let startButton = document.getElementById('start-button')
 let resault = document.getElementById('restart-text')
 let restart = document.getElementById('restart-button')
 
+let questionId = Math.floor(Math.random()*9)
 startButton.addEventListener('click', () => {
     let modal = document.getElementById('start-modal-id')
     modal.classList.add('close')
 })
 
+
 let words = [
     {question: "У кого длинный нос?", answer: "БУРАТИНО"},
     {question: "Что дает корова?", answer: "МОЛОКО"},
-    {question: "У кого длинный нос?", answer: "БУРАТИНО"},
-    {question: "У кого длинный нос?", answer: "БУРАТИНО"}
+    {question: "Друг чебурашки?", answer: "ГЕНА"},
+    {question: "Человек отравляющий жизнь?", answer: "ТОКСИК"},
+    {question: "Во что превратились динозавры?", answer: "НЕФТЬ"},
+    {question: "Как зовут Пугачеву?", answer: "АЛЛА"},
+    {question: "Самая близкая звезда?", answer: "СОЛНЦЕ"},
+    {question: "Сколько будет 2 + 3", answer: "ПЯТЬ"},
+    {question: "На каком полюсе живут пингвины?", answer: "ЮЖНОМ"},
+    {question: "Что? Где?", answer: "КОГДА"},
+    {question: "Негры в США", answer: "АФРОАМЕРИКАНЦЫ"}
 ]
 
 let score = 0
 scoreBlock.innerHTML = 'Ошибок: ' + score + '/6'
 
-questionBlock.innerHTML = 'Вопрос: ' + words[1].question
+questionBlock.innerHTML = 'Вопрос: ' + words[questionId].question
 
-let word = words[1].answer.split('');
+let word = words[questionId].answer.split('');
 let wordArr =[]
 
 for (i = 0; i < word.length; i++){
@@ -58,7 +67,7 @@ keyboardContainer.addEventListener('click', () => {
         resault.innerHTML = 'Вы проиграли епта'
     }
     console.log(wordArr.join(''))
-    if (wordArr.join('') == words[1].answer) {
+    if (wordArr.join('') == words[questionId].answer) {
         let modal = document.getElementById('resault-modal-id')
         modal.classList.add('open')
         resault.innerHTML = 'Вы победили епта'
